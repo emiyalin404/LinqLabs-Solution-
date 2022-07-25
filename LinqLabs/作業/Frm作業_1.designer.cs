@@ -77,7 +77,7 @@ namespace MyHomeWork
             this.tableLayoutPanel2.Controls.Add(this.dataGridView2, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -103,7 +103,7 @@ namespace MyHomeWork
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(5, 45);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 24;
@@ -115,7 +115,7 @@ namespace MyHomeWork
             this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -138,7 +138,7 @@ namespace MyHomeWork
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -164,7 +164,7 @@ namespace MyHomeWork
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(5, 45);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -176,7 +176,7 @@ namespace MyHomeWork
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -245,7 +245,7 @@ namespace MyHomeWork
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button6.Location = new System.Drawing.Point(528, 72);
-            this.button6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button6.Margin = new System.Windows.Forms.Padding(5);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(372, 42);
             this.button6.TabIndex = 133;
@@ -256,7 +256,7 @@ namespace MyHomeWork
             // 
             this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button14.Location = new System.Drawing.Point(57, 72);
-            this.button14.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button14.Margin = new System.Windows.Forms.Padding(5);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(372, 42);
             this.button14.TabIndex = 69;
@@ -268,7 +268,7 @@ namespace MyHomeWork
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button1.Location = new System.Drawing.Point(528, 126);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(372, 42);
             this.button1.TabIndex = 70;
@@ -279,11 +279,11 @@ namespace MyHomeWork
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button2.Location = new System.Drawing.Point(57, 126);
-            this.button2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(372, 42);
             this.button2.TabIndex = 72;
-            this.button2.Text = "     FileInfo[]   - 2017 Created - oerder ";
+            this.button2.Text = "     FileInfo[]   - 2017 Created - order ";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button13
@@ -291,7 +291,7 @@ namespace MyHomeWork
             this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button13.ForeColor = System.Drawing.Color.Black;
             this.button13.Location = new System.Drawing.Point(989, 249);
-            this.button13.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button13.Margin = new System.Windows.Forms.Padding(5);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(137, 42);
             this.button13.TabIndex = 96;
@@ -305,7 +305,7 @@ namespace MyHomeWork
             this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(989, 130);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(176, 28);
             this.comboBox1.TabIndex = 125;
@@ -315,7 +315,7 @@ namespace MyHomeWork
             this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button12.ForeColor = System.Drawing.Color.Black;
             this.button12.Location = new System.Drawing.Point(840, 249);
-            this.button12.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button12.Margin = new System.Windows.Forms.Padding(5);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(137, 42);
             this.button12.TabIndex = 97;
@@ -326,7 +326,7 @@ namespace MyHomeWork
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button4.Location = new System.Drawing.Point(61, 187);
-            this.button4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button4.Margin = new System.Windows.Forms.Padding(5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(372, 42);
             this.button4.TabIndex = 124;
@@ -338,7 +338,7 @@ namespace MyHomeWork
             this.textBox1.Font = new System.Drawing.Font("新細明體", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox1.Location = new System.Drawing.Point(640, 253);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 31);
             this.textBox1.TabIndex = 98;
@@ -392,7 +392,7 @@ namespace MyHomeWork
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm作業_1";
             this.Text = "Frm作業_1";
             this.tableLayoutPanel2.ResumeLayout(false);

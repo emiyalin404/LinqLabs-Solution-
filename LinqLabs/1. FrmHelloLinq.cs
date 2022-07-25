@@ -237,7 +237,10 @@ namespace Starter
         {
             //DataSet Model - class ....
             //SqlConnection Open()=> SqlCommand  ExecuteReader > While (SqlDataReader.Read())......=>this.nwDataSet1.Products===>Close()
-        
+
+            //DataSet ds = new DataSet();
+            //ds.Tables[0].AsEnumerable();
+
             this.productsTableAdapter1.Fill(this.nwDataSet1.Products);
 
             var q = from p in this.nwDataSet1.Products
