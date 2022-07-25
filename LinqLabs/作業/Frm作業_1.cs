@@ -35,7 +35,7 @@ namespace MyHomeWork
 
             System.IO.FileInfo[] files =  dir.GetFiles();
 
-           //files[0].Extension
+            this.dataGridView1.DataSource = files;
         }
     }
 }

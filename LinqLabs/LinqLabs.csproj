@@ -82,6 +82,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="NWDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NWDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="作業\Frm作業_1.cs">
@@ -121,6 +126,17 @@
     <EmbeddedResource Include="作業\Frm作業_1.resx">
       <DependentUpon>Frm作業_1.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="NWDataSet.xsc">
+      <DependentUpon>NWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NWDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NWDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NWDataSet.xss">
+      <DependentUpon>NWDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
