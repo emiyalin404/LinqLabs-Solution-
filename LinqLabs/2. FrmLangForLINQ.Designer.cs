@@ -90,13 +90,14 @@
             // button5
             // 
             this.button5.AutoSize = true;
-            this.button5.Location = new System.Drawing.Point(42, 100);
+            this.button5.Location = new System.Drawing.Point(35, 94);
             this.button5.Margin = new System.Windows.Forms.Padding(5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(372, 51);
             this.button5.TabIndex = 57;
             this.button5.Text = "SwapObject";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button1
             // 
@@ -108,7 +109,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(422, 51);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Generic Class";
+            this.button1.Text = "Generic Class -List<T>";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // label2
@@ -137,13 +138,14 @@
             // button7
             // 
             this.button7.AutoSize = true;
-            this.button7.Location = new System.Drawing.Point(42, 161);
+            this.button7.Location = new System.Drawing.Point(35, 162);
             this.button7.Margin = new System.Windows.Forms.Padding(5);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(450, 51);
             this.button7.TabIndex = 58;
             this.button7.Text = " SwapAnyType -Generic Method";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // listBox2
             // 
@@ -319,13 +321,14 @@
             this.button4.AutoSize = true;
             this.button4.BackColor = System.Drawing.SystemColors.Control;
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(42, 39);
+            this.button4.Location = new System.Drawing.Point(33, 33);
             this.button4.Margin = new System.Windows.Forms.Padding(5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(372, 51);
             this.button4.TabIndex = 53;
             this.button4.Text = "SwapInt / SwapString...";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // splitContainer2
             // 
@@ -534,6 +537,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Delegate 委派演進";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 

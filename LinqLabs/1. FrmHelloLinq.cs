@@ -230,7 +230,7 @@ namespace Starter
         {
             string[] words = { "aaa", "pineApple", "apple", "xxxApple", "yyyapple", "sdfklsdkfldks", "sdfdsf" };
 
-           // var q1 = words.Where(delegateobj.).Select(.....);
+            //var q1 = words.Where(delegateobj).Select(.....);
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -244,12 +244,30 @@ namespace Starter
             this.productsTableAdapter1.Fill(this.nwDataSet1.Products);
 
             var q = from p in this.nwDataSet1.Products
-                    where p.UnitPrice > 30
+                    where  p.ProductName.StartsWith("C") &&    p.UnitPrice > 30
                     select p;
 
            this.dataGridView1.DataSource =   q.ToList();  //foreach (...in q)
 
 
+        }
+
+        class xxx
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.ordersTableAdapter1.Fill(this.nwDataSet1.Orders);
+
+            var q = from o in this.nwDataSet1.Orders
+                    where o.OrderDate.Year == 1997 
+                    select o;
+
+            var q2 = q.Take(2);
+            
+            this.dataGridView1.DataSource =  q.ToList();
         }
     }
 }
