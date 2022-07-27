@@ -273,8 +273,7 @@ namespace Starter
             //var 型別難寫
             //var for 匿名型別
 
-            int n = 100;
-            var n1 = 200;
+
             var s = "abcde";
 
             MessageBox.Show(s.ToUpper());

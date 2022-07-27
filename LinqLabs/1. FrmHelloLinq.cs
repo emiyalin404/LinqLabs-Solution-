@@ -93,7 +93,7 @@ namespace Starter
             //==============================
             this.listBox1.Items.Add("========================");
             //C# compiler 轉譯
-            var w = 100;
+
 
             List<int>.Enumerator en = list.GetEnumerator();
             while (en.MoveNext())
@@ -266,7 +266,7 @@ namespace Starter
             //this.ordersTableAdapter1.Fill(this.nwDataSet1.Orders);
 
             var q = from o in this.nwDataSet1.Orders
-                    where o.OrderDate.Year == 1997 
+                    where   o.OrderDate.Year == 1997 
                     orderby o.OrderDate descending
                     select o;
 

@@ -28,6 +28,15 @@ namespace MyHomeWork
                                           };
         }
 
+        public void Theclear()
+        {
+            this.dataGridView1.Columns.Clear();
+            this.dataGridView2.Columns.Clear();
+
+
+        }
+            
+
         List<Student> students_scores;
 
         public class Student
@@ -54,11 +63,17 @@ namespace MyHomeWork
 
         private void button14_Click(object sender, EventArgs e)
         {
+            Theclear();
             System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(@"c:\windows");
 
             System.IO.FileInfo[] files =  dir.GetFiles();
+            //this.dataGridView1.DataSource = files;
+            var q = from n in files
+                    where n.Extension == ".log"
+                    select n; 
 
-            this.dataGridView1.DataSource = files;
+
+            this.dataGridView1.DataSource = q.ToList();
         }
 
         private void button36_Click(object sender, EventArgs e)
@@ -91,6 +106,76 @@ namespace MyHomeWork
             //個人 所有科的  sum, min, max, avg
 
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.ordersTableAdapter1.Fill(nwDataSet1.Orders);
+            dataGridView1.DataSource = nwDataSet1.Orders;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Theclear();
+            System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(@"c:\windows");
+
+            System.IO.FileInfo[] files = dir.GetFiles();
+            //this.dataGridView1.DataSource = files;
+            var q = from n in files
+                    where n.CreationTime.Year==2019
+                    select n;
+            this.dataGridView1.DataSource = q.ToList();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Theclear();
+            System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(@"c:\windows");
+
+            System.IO.FileInfo[] files = dir.GetFiles();
+            //this.dataGridView1.DataSource = files;
+            var q = from n in files
+                    where n.Length > 100000
+                    select n;
+            this.dataGridView1.DataSource = q.ToList();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+
+
+        }
+
+        private void Frm作業_1_Load(object sender, EventArgs e)
+        {
+            this.ordersTableAdapter1.Fill(nwDataSet1.Orders);
+             var q = from s in nwDataSet1.Orders
+                    select s.OrderDate.Year;
+
+            List<int> list = new List<int>();
+            foreach (var item in q.Distinct())
+                comboBox1.Items.Add(item);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Theclear();
+            this.ordersTableAdapter1.Fill(nwDataSet1.Orders);
+            this.order_DetailsTableAdapter1.Fill(nwDataSet1.Order_Details);
+
+            var q = from p in nwDataSet1.Orders
+                    where p.OrderDate.Year.ToString() == comboBox1.Text && !p.IsShipPostalCodeNull() && !p.IsShipRegionNull() && !p.IsShippedDateNull()
+                    select p;
+            this.dataGridView1.DataSource = q.ToList();
+
+            var q1 = from b in q.ToList()
+                     join a in nwDataSet1.Order_Details
+                            on b.OrderID equals a.OrderID
+                     select a;
+            this.dataGridView2.DataSource = q1.ToList();
+            //join a in nwDataSet1.Order_Details
+            //        on p.OrderID equals a.OrderID
         }
     }
 }
