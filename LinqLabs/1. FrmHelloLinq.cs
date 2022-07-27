@@ -12,9 +12,13 @@ namespace Starter
     public partial class FrmHelloLinq : Form
     {
         public FrmHelloLinq()
-        {
+        { 
             InitializeComponent();
-
+       
+            this.ordersTableAdapter1.Fill(this.nwDataSet1.Orders);
+            this.Text = "xxx";
+            this.button1.Text = "1111";
+         
         }
 
         private void button49_Click(object sender, EventArgs e)
@@ -259,15 +263,16 @@ namespace Starter
 
         private void button10_Click(object sender, EventArgs e)
         {
-            this.ordersTableAdapter1.Fill(this.nwDataSet1.Orders);
+            //this.ordersTableAdapter1.Fill(this.nwDataSet1.Orders);
 
             var q = from o in this.nwDataSet1.Orders
                     where o.OrderDate.Year == 1997 
+                    orderby o.OrderDate descending
                     select o;
 
             var q2 = q.Take(2);
             
-            this.dataGridView1.DataSource =  q.ToList();
+           this.dataGridView1.DataSource =  q2.ToList();
         }
     }
 }

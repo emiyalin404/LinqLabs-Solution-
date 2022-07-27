@@ -82,5 +82,15 @@ namespace MyHomeWork
             #endregion
 
         }
+
+        private void button37_Click(object sender, EventArgs e)
+        {
+            //new {.....  Min=33, Max=34.}
+            // 找出 'aaa', 'bbb' 'ccc' 學員 國文數學兩科 科目成績  |		
+
+            //個人 所有科的  sum, min, max, avg
+
+
+        }
     }
 }
