@@ -335,6 +335,7 @@ namespace Starter
 
           this.dataGridView1.DataSource =      q.ToList();
 
+            MessageBox.Show($"{777:C2}  ***{333,-30}***");
             //==================================
 
             //var q2 = from p in this.nwDataSet1.Products
@@ -348,11 +349,37 @@ namespace Starter
             //             TotalPrice = p.UnitPrice * p.UnitsInStock
             //         };
 
-            var q2 = this.nwDataSet1.Products.Where(p => p.UnitPrice > 30).Select(p => new { p.ProductID, p.ProductName, p.UnitPrice, p.UnitsInStock,  TotalPrice= p.UnitPrice * p.UnitsInStock });
+            var q2 = this.nwDataSet1.Products.Where(p => p.UnitPrice > 30).Select(p => new { p.ProductID, p.ProductName, p.UnitPrice, p.UnitsInStock,  TotalPrice= $"{p.UnitPrice * p.UnitsInStock:c2}" });
            this.dataGridView2.DataSource =  q2.ToList();
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+            string s = "hasjdfdfhnfdsa";
+            int count =s.Wordcount();
+            MessageBox.Show("count = " + count);
+
+            string s1 = "123456789";
+             count = s1.Wordcount();
+            MessageBox.Show("count = " + count);
+
+            //==========================================
+            char ch = s1.Chars(3);
+            MessageBox.Show("ch = " + ch);
         }
     }
 
+    public static class MyString
+    {
+        public static int Wordcount(this string s)
+        {
+            return s.Length;
+        }
+        public static char Chars(this string s, int index)
+        {
+            return s[index];
+        }
+    }
     class MyPoint
     {
 

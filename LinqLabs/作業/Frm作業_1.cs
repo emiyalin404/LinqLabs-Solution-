@@ -15,6 +15,7 @@ namespace MyHomeWork
         public Frm作業_1()
         {
             InitializeComponent();
+            this.productsTableAdapter1.Fill(nwDataSet1.Products);
 
             students_scores = new List<Student>()
                                          {
@@ -35,7 +36,7 @@ namespace MyHomeWork
 
 
         }
-            
+
 
         List<Student> students_scores;
 
@@ -53,9 +54,33 @@ namespace MyHomeWork
         {
 
         }
-
-        private void button13_Click(object sender, EventArgs e)
+        int i;
+        int T;
+        int B;
+        //int c;
+        //int f;
+        //public static int f(int i, int c)
+        //{
+        //    return i * (c - 1);
+        //}
+   
+        public void button13_Click(object sender, EventArgs e)
         {
+            //Theclear();
+            //c += 1;
+            //f = (c - 1);
+
+            //T += i;
+            B = T;
+            i = (Convert.ToInt32(textBox1.Text));
+            var q = (from n in nwDataSet1.Products
+                     select n).Skip(B).Take(i);
+            this.dataGridView1.DataSource = q.ToList();
+
+            //B = T + i;
+            T += i;
+            //if(i)
+
             //this.nwDataSet1.Products.Take(10);//Top 10 Skip(10)
 
             //Distinct()
@@ -66,11 +91,11 @@ namespace MyHomeWork
             Theclear();
             System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(@"c:\windows");
 
-            System.IO.FileInfo[] files =  dir.GetFiles();
+            System.IO.FileInfo[] files = dir.GetFiles();
             //this.dataGridView1.DataSource = files;
             var q = from n in files
                     where n.Extension == ".log"
-                    select n; 
+                    select n;
 
 
             this.dataGridView1.DataSource = q.ToList();
@@ -79,21 +104,11 @@ namespace MyHomeWork
         private void button36_Click(object sender, EventArgs e)
         {
             #region 搜尋 班級學生成績
-
+            Theclear();
             // 
             // 共幾個 學員成績 ?						
-
-            // 找出 前面三個 的學員所有科目成績					
-            // 找出 後面兩個 的學員所有科目成績					
-
-            // 找出 Name 'aaa','bbb','ccc' 的學成績						
-
-            // 找出學員 'bbb' 的成績	                          
-
-            // 找出除了 'bbb' 學員的學員的所有成績 ('bbb' 退學)	
-
-        		
-            // 數學不及格 ... 是誰 
+            this.dataGridView1.DataSource = students_scores;
+ 
             #endregion
 
         }
@@ -122,7 +137,7 @@ namespace MyHomeWork
             System.IO.FileInfo[] files = dir.GetFiles();
             //this.dataGridView1.DataSource = files;
             var q = from n in files
-                    where n.CreationTime.Year==2019
+                    where n.CreationTime.Year == 2019
                     select n;
             this.dataGridView1.DataSource = q.ToList();
         }
@@ -142,15 +157,14 @@ namespace MyHomeWork
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-
-
+            Theclear();
         }
 
         private void Frm作業_1_Load(object sender, EventArgs e)
         {
+
             this.ordersTableAdapter1.Fill(nwDataSet1.Orders);
-             var q = from s in nwDataSet1.Orders
+            var q = from s in nwDataSet1.Orders
                     select s.OrderDate.Year;
 
             List<int> list = new List<int>();
@@ -176,6 +190,81 @@ namespace MyHomeWork
             this.dataGridView2.DataSource = q1.ToList();
             //join a in nwDataSet1.Order_Details
             //        on p.OrderID equals a.OrderID
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            //c -= 1;
+            i = (Convert.ToInt32(textBox1.Text));
+            B -= i;
+
+            var q = (from n in nwDataSet1.Products
+                     select n).Skip(B).Take(i);
+            this.dataGridView1.DataSource = q.ToList();
+            T = B + i;
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Theclear();
+            //找出 前面三個 的學員所有科目成績
+            var q = (from p in students_scores
+                     orderby p.Name
+                     select p).Take(3);
+            this.dataGridView1.DataSource = q.ToList();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Theclear();
+            //找出 後面三個 的學員所有科目成績
+            var q = (from p in students_scores
+                     orderby p.Name
+                     select p).Skip(students_scores.Count - 3)/*.Take(students_scores.Count-3)*/;
+            this.dataGridView1.DataSource = q.ToList();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+             Theclear();
+            // 找出 Name 'aaa','bbb','ccc' 的學成績	 
+            // //IEnumerable<string> q = students_scores.Where<string>( n=> n ="aaa")
+            var q = from p in students_scores
+                    where p.Name == "aaa" || p.Name == "bbb" || p.Name == "ccc"
+                    select p;
+            this.dataGridView1.DataSource = q.ToList();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Theclear();
+            // 找出學員 'bbb' 的成績
+            var q = from p in students_scores
+                    where p.Name == "bbb"
+                    select p;
+            this.dataGridView1.DataSource = q.ToList();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Theclear();
+            //找出除了 'bbb' 學員的學員的所有成績('bbb' 退學)
+            var q = from p in students_scores
+                    where p.Name != "bbb"
+                    select p;
+            this.dataGridView1.DataSource = q.ToList();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Theclear();
+            //數學不及格... 是誰
+            var q = from p in students_scores
+                    where p.Math <60
+                    select p;
+            this.dataGridView1.DataSource = q.ToList();
         }
     }
 }
